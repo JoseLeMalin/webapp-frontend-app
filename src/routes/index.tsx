@@ -3,9 +3,17 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+
 function Home() {
-  const getTodos = async () => {
+  /* const getTodos = async () => {
     const response = await fetch("http://localhost:5195/todoitems", {
+      method: "GET",
+    });
+    const data = await response.json();
+    console.log(data);
+  }; */
+  const getTodos = async () => {
+    const response = await fetch("http://localhost:5221/api/user", {
       method: "GET",
     });
     const data = await response.json();
